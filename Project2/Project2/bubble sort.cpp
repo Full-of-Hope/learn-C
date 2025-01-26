@@ -10,6 +10,7 @@ int main() {
 	}
 	return 0;
 }
+//
 void sort(vector<int>&x) {
 	int length = x.size();
 	for (int i = 0; i < length - 1; i++) {       //进行length-1次，每次得到在当前比较中最大的
