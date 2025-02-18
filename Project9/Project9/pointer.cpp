@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-void sort(int*, int);//指针指向首地址
-void display(int*, int);//指针指向首地址
+void sort(int*, int);
+void display(int*, int);
 int main() {
 	int arr[] = { 1,24,45,53,23,33,12,62 };
 	int length = sizeof(arr) / sizeof(arr[0]);
