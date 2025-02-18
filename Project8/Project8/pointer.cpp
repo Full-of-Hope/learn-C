@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-void swap01(int, int);//Öµ´«µİ
-void swap02(int&, int&);//ÒıÓÃ´«µİ
-void swap03(int*, int*);//µØÖ·´«µİ
+void swap01(int, int);//å€¼ä¼ é€’
+void swap02(int&, int&);//å¼•ç”¨ä¼ é€’
+void swap03(int*, int*);//åœ°å€ä¼ é€’
 void display(int, int);
 int main() {
 	int a = 1, b = 2;
