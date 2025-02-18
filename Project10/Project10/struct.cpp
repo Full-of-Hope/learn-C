@@ -1,15 +1,14 @@
 #include<iostream>
 #include<string>
 using namespace std;
-
-//´´½¨Êı¾İÀàĞÍ
+//åˆ›å»ºæ•°æ®ç±»å‹
 struct student
 {
 	string name;
 	int old=0;
 	int score=0;
 }z;//3
-struct teacher {//½á¹¹ÌåÇ¶Ì×
+struct teacher {//ç»“æ„ä½“åµŒå¥—
 	int id=0;
 	string name;
 	int age=0;
@@ -20,7 +19,7 @@ void print1(student);
 void print2(student*);
 void print3(student*);
 int main() {
-	//´´½¨¾ßÌåÑ§Éú,struct¿ÉÒÔÊ¡ÂÔ
+	//åˆ›å»ºå…·ä½“å­¦ç”Ÿ,structå¯ä»¥çœç•¥
 	//1
 	student x ;
 	x.name = "mike";
@@ -30,31 +29,31 @@ int main() {
 	//2
 	struct student y = { "junn",18,90 };
 	cout << "name is " << y.name << " ,your old is " << y.old << ",your score is " << y.score << endl;
-	//3ÔÚ¶¨Òå½á¹¹ÌåÊ±£¬Ëæ±ã´´½¨Ò»¸ö½á¹¹Ìå±äÁ¿
+	//3åœ¨å®šä¹‰ç»“æ„ä½“æ—¶ï¼Œéšä¾¿åˆ›å»ºä¸€ä¸ªç»“æ„ä½“å˜é‡
 	z.name = "hello";
 	cout << "name is " << z.name << " ,your old is " << z.old << ",your score is " << z.score << endl;
 
 	system("pause");
-	//½á¹¹ÌåÊı×é
+	//ç»“æ„ä½“æ•°ç»„
 	struct student classroom[3] = {
 		{ "junn",18,90 },
 		{ "mike",12,100 },
 		{"hello",21,95}
 	};
-	classroom[2].old = 36;//¸³Öµ
+	classroom[2].old = 36;//èµ‹å€¼
 	for (int i = 0; i < 3; i++) {
 		cout << "name is " << classroom[i].name 
 			<< " ,your old is " << classroom[i].old 
 			<< ",your score is " << classroom[i].score << endl;
 	}
 	system("pause");
-	//½á¹¹ÌåÖ¸Õë,ÀûÓÃptr->½øĞĞ·ÃÎÊ
+	//ç»“æ„ä½“æŒ‡é’ˆ,åˆ©ç”¨ptr->è¿›è¡Œè®¿é—®
 	student* ptr = &y;
 	cout << "name is " << ptr->name 
 		<< " ,your old is " << ptr->old
 		<< ",your score is " << ptr->score << endl;
 	system("pause");
-	//Ç¶Ì×
+	//åµŒå¥—
 	teacher t;
 	t.id = 123;
 	t.age = 50;
@@ -63,7 +62,7 @@ int main() {
 	cout << "teacher's id is " << t.id << ",teacher's name is " << t.name << " ,teacher's age is " << t.age<<"\n"
 		<< "student's name is " << t.stu.name << ",student's old is " << t.stu.old << ",student's score is " << t.stu.score << endl;
 	system("pause");
-	//´«µİ
+	//ä¼ é€’
 	
 	print1(x);
 	cout << "name is " << x.name << " ,your old is " << x.old << ",your score is " << x.score << endl;
@@ -71,17 +70,17 @@ int main() {
 	cout << "name is " << x.name << " ,your old is " << x.old << ",your score is " << x.score << endl;
 	system("pause");
 
-	//constÊ¹ÓÃ³¡¾°
+	//constä½¿ç”¨åœºæ™¯
 	student a = { "hi",12,66 };
 	print3(&a);
 	return 0;
 }
-//1¡¢Öµ´«µİ
+//1ã€å€¼ä¼ é€’
 void print1(student x) {
 	 x.old = 66;
 	 cout << "1name is " << x.name << " ,1your old is " << x.old << ",1your score is " << x.score << endl;
 }
-void print2(student *x) {//Ö»Õ¼8¸ö×Ö½Ú£¬½ÚÊ¡ÄÚ´æ
+void print2(student *x) {//åªå 8ä¸ªå­—èŠ‚ï¼ŒèŠ‚çœå†…å­˜
 	x->old = 66;
 	cout << "2name is " << x->name << " ,2your old is " << x->old << ",2your score is " << x->score << endl;
 }
